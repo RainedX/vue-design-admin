@@ -1,7 +1,7 @@
 <template>
   <div>
     <a-drawer
-      title="Setting Theme"
+      title="Setting"
       placement="right"
       :closable="false"
       @close="onClose"

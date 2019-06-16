@@ -8,8 +8,11 @@
       v-model="collapsed"
       :trigger="null"
     >
-      <div class="logo">Admin System</div>
-      <side-menu></side-menu>
+      <div class="logo" v-if="!collapsed">Admin</div>
+      <div class="logo" v-else>
+        <a-icon type="windows"></a-icon>
+      </div>
+      <side-menu :collapsed="collapsed" :navTheme="navTheme"></side-menu>
     </a-layout-sider>
     <a-layout>
       <a-layout-header style="background: #fff; padding: 0" >
